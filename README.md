@@ -1,6 +1,8 @@
 # API-CRUD-operations
+This API provides endpoints for performing CRUD (Create, Read, Update, Delete) operations on a database of items.
 
-# Required Dependencies
+
+## Required Dependencies
 
 ```
 package.json: npm init
