@@ -1,0 +1,22 @@
+1. 5: `body-parser` is a middleware for handling HTTP requests in a Node.js application. It allows you to extract the request body from incoming HTTP requests and parse it into a usable format. This is particularly useful when dealing with POST and PUT requests that contain data in the request body.
+
+2. 79:  the `app.listen()` method is called with two arguments: the first argument is the port number that the server should listen on (in this case, 4500), and the second argument is a callback function that is executed when the server starts listening on the specified port.
+
+3. //create product
+The `app.post()` method is used to define the route handler for the POST request.
+`Asynchronous function` that will handle the request and send a response.
+The `await` keyword is used to wait for the Product.create() method to finish executing before moving on to the next line of code.
+The response is sent using the `res.status()` and `res.json()` methods. The res.status() method sets the HTTP status code to `200 (OK)`, and the res.json() method sends a JSON response with a success property set to true and a product property set to the newly created product object.
+
+4. //Read product
+The `app.get()` method is used to define the route handler for the GET request. 
+
+5. //update delete
+The `app.get()` method is usedto define the route handler for the UPDATE request.
+we use `await Product.findById(req.params.id)` to asynchronously query the database for the product document with the specified ID. If no product is found, we return a `500 status code(server error)`  and an error message in the response.
+`Product.findByIdAndUpdate(req.params.id,req.body,{...})`This method returns the updated document.
+The third argument to `Product.findByIdAndUpdate()` is an options object that includes *new: true, useFindAndModify: false, and runValidators: true*. These options specify that we want to return the updated document.
+`req.params` is used to access dynamic parameters in the URL route, while `req.body` is used to access data submitted in the request body.
+
+6. //delete product
+`await Product.deleteOne({ _id: req.params.id })` uses the Mongoose deleteOne() method to delete the product with the given ID from the database.
