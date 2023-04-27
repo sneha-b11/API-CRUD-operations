@@ -8,6 +8,7 @@ This API provides endpoints for performing CRUD (Create, Read, Update, Delete) o
 package.json: npm init
 express: npm i express
 mongoose: npm i mongoose
+Body Parser: npm i body-parser
 ```
 
 ## Lets Connect
